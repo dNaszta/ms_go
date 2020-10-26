@@ -10,18 +10,18 @@ import (
 )
 
 type TZConvertion struct {
-	TimeZone       string `bson:"timeZone" json:"timeZone"`
-	TimeDifference string `bson:"timeDifference" json:"timeDifference"`
+	TimeZone       string `bson:"timezone" json:"timeZone"`
+	TimeDifference string `bson:"timedifference" json:"timeDifference"`
 }
 
 type Repository struct {
-	ctx				context.Context
-	client			*mongo.Client
-	dbServer		string
-	dbDatabase		string
-	dbCollection	string
-	collection 		*mongo.Collection
-	clientOptions	*options.ClientOptions
+	ctx           context.Context
+	client        *mongo.Client
+	dbServer      string
+	dbDatabase    string
+	dbCollection  string
+	collection    *mongo.Collection
+	clientOptions *options.ClientOptions
 }
 
 func NewRepository(dbServer string, dbDatabase string, dbCollection string, dbUser string, dbPass string) *Repository {
@@ -30,7 +30,7 @@ func NewRepository(dbServer string, dbDatabase string, dbCollection string, dbUs
 	repo.dbServer = dbServer
 	repo.dbDatabase = dbDatabase
 	repo.dbCollection = dbCollection
-	repo.clientOptions = options.Client().ApplyURI("mongodb://"+dbServer).SetAuth(
+	repo.clientOptions = options.Client().ApplyURI("mongodb://" + dbServer).SetAuth(
 		options.Credential{
 			Username: dbUser,
 			Password: dbPass,
@@ -78,7 +78,7 @@ func (repo *Repository) FindAll() ([]TZConvertion, error) {
 
 func (repo *Repository) FindByTimeZone(tz string) (TZConvertion, error) {
 	var tzc TZConvertion
-	err := repo.collection.FindOne(repo.ctx, bson.M{"timeZone": tz}).Decode(&tzc)
+	err := repo.collection.FindOne(repo.ctx, bson.M{"timezone": tz}).Decode(&tzc)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -91,12 +91,12 @@ func (repo *Repository) Insert(tzc TZConvertion) error {
 }
 
 func (repo *Repository) Delete(tzc TZConvertion) error {
-	_, err := repo.collection.DeleteMany(context.TODO(), bson.M{"timeZone": tzc.TimeZone})
+	_, err := repo.collection.DeleteMany(context.TODO(), bson.M{"timezone": tzc.TimeZone})
 	return err
 }
 
 func (repo *Repository) Update(tz string, tzc TZConvertion) error {
-	filter := bson.D{{"timeZone", tz}}
+	filter := bson.D{{"timezone", tz}}
 	_, err := repo.collection.UpdateOne(repo.ctx, filter, &tzc)
 	return err
 }

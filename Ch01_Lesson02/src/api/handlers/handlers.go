@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/dNaszta/ms_go/Ch01_Lesson02/src/api/repository"
 	"github.com/gorilla/mux"
 	"net/http"
@@ -17,6 +18,9 @@ func (h *Handlers) All(w http.ResponseWriter, r *http.Request) {
 		error500(w, err)
 		return
 	}
+
+	fmt.Print(tzcs)
+
 	jr, err := json.Marshal(tzcs)
 	if err != nil {
 		error500(w, err)
