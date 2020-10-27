@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e0e933b-9df2-4ce6-acb7-9b8e4cef58dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ch01_Lesson02/src/api/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch01_Lesson02/src/api/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch01_Lesson02/src/api/handlers/handlers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch01_Lesson02/src/api/handlers/utils.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch01_Lesson02/src/api/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch01_Lesson02/src/api/repository/repository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson01/example01/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +20,13 @@
   <component name="GOROOT" path="/usr/lib/go-1.13" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/dNaszta/ms_go" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1jO9qyCULWop8uzt5lc614wIOGc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -60,6 +62,21 @@
       <option name="presentableId" value="Default" />
       <updated>1603664465413</updated>
     </task>
+    <task id="LOCAL-00001" summary="findAll works">
+      <created>1603745181737</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603745181737</updated>
+    </task>
+    <task id="LOCAL-00002" summary="bugfix - too much error handling">
+      <created>1603794099997</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603794099997</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -67,6 +84,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="findAll works" />
+    <MESSAGE value="bugfix - too much error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix - too much error handling" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -76,6 +96,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2705" y="390" width="400" height="334" key="#Go_Modules/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1603716065957" />
+    <state x="2449" y="35" width="912" height="1043" key="CommitChangelistDialog2" timestamp="1603794099869">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2449" y="35" width="912" height="1043" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1603794099869" />
     <state x="2399" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1603737338118">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
