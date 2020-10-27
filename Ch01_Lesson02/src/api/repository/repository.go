@@ -10,8 +10,8 @@ import (
 )
 
 type TZConvertion struct {
-	TimeZone       string `bson:"timezone" json:"timeZone"`
-	TimeDifference string `bson:"timedifference" json:"timeDifference"`
+	TimeZone       	string `bson:"timezone" json:"timeZone"`
+	TimeDifference 	string `bson:"timedifference" json:"timeDifference"`
 }
 
 type Repository struct {
@@ -86,6 +86,7 @@ func (repo *Repository) FindByTimeZone(tz string) (TZConvertion, error) {
 }
 
 func (repo *Repository) Insert(tzc TZConvertion) error {
+	fmt.Print(tzc)
 	_, err := repo.collection.InsertOne(repo.ctx, tzc)
 	return err
 }
@@ -96,7 +97,7 @@ func (repo *Repository) Delete(tzc TZConvertion) error {
 }
 
 func (repo *Repository) Update(tz string, tzc TZConvertion) error {
-	filter := bson.D{{"timezone", tz}}
-	_, err := repo.collection.UpdateOne(repo.ctx, filter, &tzc)
+	filter := bson.M{"timezone": tz}
+	_, err := repo.collection.ReplaceOne(repo.ctx, filter, &tzc)
 	return err
 }
