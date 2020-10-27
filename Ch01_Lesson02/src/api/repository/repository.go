@@ -10,8 +10,8 @@ import (
 )
 
 type TZConvertion struct {
-	TimeZone       	string `bson:"timezone" json:"timeZone"`
-	TimeDifference 	string `bson:"timedifference" json:"timeDifference"`
+	TimeZone       string `bson:"timezone" json:"timeZone"`
+	TimeDifference string `bson:"timedifference" json:"timeDifference"`
 }
 
 type Repository struct {
@@ -79,9 +79,6 @@ func (repo *Repository) FindAll() ([]TZConvertion, error) {
 func (repo *Repository) FindByTimeZone(tz string) (TZConvertion, error) {
 	var tzc TZConvertion
 	err := repo.collection.FindOne(repo.ctx, bson.M{"timezone": tz}).Decode(&tzc)
-	if err != nil {
-		log.Fatal(err)
-	}
 	return tzc, err
 }
 
