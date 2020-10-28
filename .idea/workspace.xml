@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e0e933b-9df2-4ce6-acb7-9b8e4cef58dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ch02_Lesson03/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/explanation/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/step1/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/step2/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/step3/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/step4/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
