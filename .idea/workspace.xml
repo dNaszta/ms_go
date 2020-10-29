@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e0e933b-9df2-4ce6-acb7-9b8e4cef58dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/explanation/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/step1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/step2/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/step3/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ch02_Lesson04_Middleware/step4/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson05_Test_Handlers/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson05_Test_Handlers/handlers/handlers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson05_Test_Handlers/handlers/handlers_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ch02_Lesson05_Test_Handlers/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +55,24 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TestHandlers in github.com/dNaszta/ms_go/Ch02_Lesson05_Test_Handlers/handlers" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="ms_go" />
+      <working_directory value="$PROJECT_DIR$/Ch02_Lesson05_Test_Handlers/handlers" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/dNaszta/ms_go/Ch02_Lesson05_Test_Handlers/handlers" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestHandlers\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestHandlers in github.com/dNaszta/ms_go/Ch02_Lesson05_Test_Handlers/handlers" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
