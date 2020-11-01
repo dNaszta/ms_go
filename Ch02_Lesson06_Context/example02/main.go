@@ -10,7 +10,7 @@ import (
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", myHandlerFunc)
-	log.Fatal(http.ListenAndServe(":8080", AddSessionData(mux)))
+	log.Fatal(http.ListenAndServe(":9080", AddSessionData(mux)))
 }
 
 type key int
@@ -56,5 +56,6 @@ func myHandlerFunc(w http.ResponseWriter, r *http.Request) {
 		//Write Unauthorized Status Code
 		w.WriteHeader(http.StatusUnauthorized)
 		w.Write([]byte("Unauthorized"))
+		log.Print("Unauthorized request")
 	}
 }
