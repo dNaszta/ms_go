@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
-	"net/http"
-	"log"
 	"github.com/dNaszta/ms_go/Ch02_Lesson06_Context/example02/repo"
+	"log"
+	"net/http"
 )
 
 func main() {
