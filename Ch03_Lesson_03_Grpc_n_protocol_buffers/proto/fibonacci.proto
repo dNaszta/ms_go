@@ -1,0 +1,17 @@
+syntax = "proto3";
+package fibonacci;
+
+option go_package = "github.com/dNaszta/ms_go/Ch03_Lesson_03_Grpc_n_protocol_buffers/proto";
+
+service Fibonacci {
+  rpc Calculate (FibonacciRequest) returns (FibonacciReply) {}
+}
+
+message FibonacciRequest {
+  uint32 number = 1;
+}
+
+message FibonacciReply {
+  uint64 result = 1;
+  uint64 processingTime = 2;
+}
