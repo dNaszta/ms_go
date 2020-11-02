@@ -1,16 +1,14 @@
 package main
 
 import (
+	"context"
 	"errors"
+	pb "github.com/dNaszta/ms_go/Ch03_Lesson_03_Grpc_n_protocol_buffers/fibonacci"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 	"log"
 	"net"
 	"time"
-
-	"context"
-
-	pb "github.com/dNaszta/ms_go/Ch03_Lesson_03_Grpc_n_protocol_buffers/proto"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/reflection"
 )
 
 const (
