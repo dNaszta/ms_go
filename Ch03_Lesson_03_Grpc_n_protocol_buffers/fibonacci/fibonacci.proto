@@ -1,7 +1,7 @@
 syntax = "proto3";
 package fibonacci;
 
-option go_package = "github.com/dNaszta/ms_go/Ch03_Lesson_03_Grpc_n_protocol_buffers/proto";
+option go_package = "github.com/dNaszta/ms_go/Ch03_Lesson_03_Grpc_n_protocol_buffers/fibonacci";
 
 service Fibonacci {
   rpc Calculate (FibonacciRequest) returns (FibonacciReply) {}

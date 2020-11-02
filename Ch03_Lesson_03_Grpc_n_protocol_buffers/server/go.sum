@@ -5,6 +5,7 @@ github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDk
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
 github.com/dNaszta/ms_go v0.0.0-20201101205917-e6427fb122a3 h1:ZFQrkXwI2yK4txGXWSxqRMGgA9AZwj0K2qWvLTqbax4=
 github.com/dNaszta/ms_go v0.0.0-20201102130126-57fbbfe22740 h1:rKuZ4L1kyHbVygwdoJxh+Km3J8HzE870LbJYQ4Vn3OM=
+github.com/dNaszta/ms_go v0.0.0-20201102201430-a8b8b0a3963c h1:QUExylx6IbUfbzzkOWOiKFcHGZWWViABObL0m9rCtGs=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.4/go.mod h1:6rpuAdCZL397s3pYoYcLgu1mIlRU8Am5FuJP05cCM98=
