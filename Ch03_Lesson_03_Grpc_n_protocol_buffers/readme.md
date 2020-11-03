@@ -1,4 +1,4 @@
-1. create .proto for your functionality1. Download Protocol Buffers - https://developers.google.com/protocol-buffers/docs/downloads
+1. Download Protocol Buffers - https://developers.google.com/protocol-buffers/docs/downloads
 2. Create `.proto` file to describe services and messages
 3. Install gen go tool for generate go source - 
 ```go get google.golang.org/protobuf/cmd/protoc-gen-go google.golang.org/grpc/cmd/protoc-gen-go-grpc```
