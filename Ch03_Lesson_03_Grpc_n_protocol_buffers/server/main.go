@@ -2,10 +2,8 @@ package main
 
 import (
 	"context"
-	"errors"
 	pb "github.com/dNaszta/ms_go/Ch03_Lesson_03_Grpc_n_protocol_buffers/fibonacci"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/reflection"
 	"log"
 	"net"
 	"time"
@@ -13,19 +11,19 @@ import (
 
 const (
 	port = ":50051"
+	num = 4967295
 )
 
 type server struct {
-	//Cache of results
-	cache [4294967295]uint64
+	cache [num]uint64
+	pb.UnimplementedFibonacciServer
 }
 
+func (s *server) mustEmbedUnimplementedFibonacciServer() {}
+
 func (s *server) Calculate(ctx context.Context, in *pb.FibonacciRequest) (*pb.FibonacciReply, error) {
-	if in.Number > 4294967295 {
-		return nil, errors.New("Invalid Input")
-	}
 	timeStart := time.Now()
-	result := s.calculateFibonacci(in.Number)
+	result := s.CalculateFibonacci(in.Number)
 
 	return &pb.FibonacciReply{
 		Result:         result,
@@ -33,7 +31,7 @@ func (s *server) Calculate(ctx context.Context, in *pb.FibonacciRequest) (*pb.Fi
 	}, nil
 }
 
-func (s *server) calculateFibonacci(num uint32) uint64 {
+func (s *server) CalculateFibonacci(num uint32) uint64 {
 	if num == 0 {
 		return 0
 	}
@@ -46,7 +44,7 @@ func (s *server) calculateFibonacci(num uint32) uint64 {
 		return res
 	}
 
-	res = s.calculateFibonacci(num-2) + s.calculateFibonacci(num-1)
+	res = s.CalculateFibonacci(num-2) + s.CalculateFibonacci(num-1)
 	s.cache[num] = res
 	return res
 }
@@ -57,11 +55,7 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	s := grpc.NewServer()
-	fibS := new(server)
-
-	pb.RegisterFibonacciServer(s, fibS)
-	// Register reflection service on gRPC server.
-	reflection.Register(s)
+	pb.RegisterFibonacciServer(s, &server{})
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}

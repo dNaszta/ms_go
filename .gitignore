@@ -1,1 +1,3 @@
 .idea/
+Ch03_Lesson_03_Grpc_n_protocol_buffers/server/vendor/
+Ch03_Lesson_03_Grpc_n_protocol_buffers/client/vendor/
